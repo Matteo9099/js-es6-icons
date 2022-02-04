@@ -137,15 +137,9 @@ selector.addEventListener('change', function(){
             }
             return false;
         });
-    
-        drawIcons(container, filtered);
-    
-    }
-
-    
+        drawIcons(container, filtered);  
+    } 
 });
-
-
 
 // 1 atr riferimento container 2 atr riferimento icone da assegnare
 function drawIcons(container, icons){
@@ -161,13 +155,8 @@ function drawIcons(container, icons){
                     </div> 
                      `;
     });
-
     container.innerHTML = content;
-
 }
-
-
-
 
 // creo una funzione che mi generi in modo casuale un codice colore, formato da # iniziale
 // e seguito da 6 caratteri alfanumerici compresi tra 0 e 9 e A e F
@@ -180,4 +169,20 @@ function RandomColore(length) {
    return result;
 }
 
-console.log(RandomColore(6));
+
+
+//genero le option tramite forEach
+let array_type=[];
+
+
+icons.forEach( tipo => {
+    const tipoCorrente = tipo.type;
+
+    if(!array_type.includes(tipoCorrente)){
+        array_type.push(tipoCorrente);
+    }
+});
+
+
+array_type.forEach( tipo => selector.add(new Option(tipo)));
+

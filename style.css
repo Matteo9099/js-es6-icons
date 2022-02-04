@@ -53,9 +53,9 @@ main .container{
     flex-direction: column;
     width: calc(100% / 5 - 60px);
     border: 1px solid #000;
-    height: 150px;
     border-radius: 10px;
     text-transform: uppercase;
+    padding: 10px 0;
     margin: 20px 30px;
     background-color: #fff;
 }
@@ -64,6 +64,3 @@ main .container{
     font-size: 30px;
 }
 
-.color-orange{
- 
-}
